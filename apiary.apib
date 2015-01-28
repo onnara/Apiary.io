@@ -1,0 +1,34 @@
+FORMAT: 1A
+
+# ID:MA-BE-SVC-001(AddressService)
+<pre>
+Operation: GetNewAddress
+Opposition Operation: GetJibunAddress
+</pre>
+[AddressService]는 지번 주소를 도로명 주소로, 도로명 주소를 지번주소로 변경한다.
+
+# Group AddressService
+GetNewAddress related resources of the **AddressService API**
+
+## JibunAddress Collection [/GetNewAddress/{jibun}]
+### Get NewAddress [GET]
++ Parameters
+    + jibun (required, string, `야탑동 129-1`) ...
+
++ Request
+    
+    + Header
+        
+            Authorization: Basic dXNlcjpwYXNzd29yZA==
+        
+   
+        
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park"
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office"
+        }]
+
+
